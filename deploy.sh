@@ -26,8 +26,10 @@ rm easybash.tar.gz
 tar -zcvf easybash.tar.gz easybash-latest
 rsync -a easybash-latest/* ./
 rm -rf easybash-latest
-git add .
-git commit -m "[update] $(date '+%Y-%m-%d %H:%M:%S')"
-git push origin master
+
+
+#git add .
+#git commit -m "[update] $(date '+%Y-%m-%d %H:%M:%S')"
+#git push origin master
 
 echo "Data updated."

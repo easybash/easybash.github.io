@@ -30,4 +30,6 @@
 /examples/
 README.md
 
+deploy.sh
+
 !.gitignore

@@ -19,7 +19,6 @@ install:
     - nginx
 #   - nodejs
     - php
-#   - postfix
     - redis
   
 config:
@@ -27,7 +26,7 @@ config:
     # Apache server                  #
     #---------+----------------------#
     # version | latest: 2.4.43       #
-    #         | system: 2.4.29       #
+    #         | system: 2.4.41       #
     #---------+----------------------#
     apache:
         name: apache
@@ -44,8 +43,8 @@ config:
     #----------------------------------#
     # Golang                           #
     #-----------------+----------------#
-    # version         | latest: 1.14.2 #
-    #                 | system: 1.10.4 #
+    # version         | latest: 1.13.8 #
+    #                 | system: 1.13.8 #
     #-----------------+----------------#
     golang:
         name: golang
@@ -53,9 +52,9 @@ config:
     #------------------------------------#
     # MariaDB                            #
     #-----------------+------------------#
-    # version         | latest: 10.4.12  #
-    #                 | system: 10.1.29  #
-    #                 | mainline: 10.5.2 #
+    # version         | latest: 10.5.8   #
+    #                 | system: 10.3.22  #
+    #                 | mainline: 10.5.8 #
     # password        | *                #
     # secure          | y, n             #
     # remote          | y, n             #
@@ -74,7 +73,7 @@ config:
     # MySQL                            #
     #-----------------+----------------#
     # version         | latest: 8.0.19 #
-    #                 | system: 5.7.29 #
+    #                 | system: 8.0.19 #
     # password        | *              #
     # secure          | y, n           #
     # remote          | y, n           #
@@ -92,27 +91,27 @@ config:
     #--------------------------------#
     # Nginx                          #
     #---------+----------------------#
-    # version | latest: 1.18.0       #
-    #         | mainline: 1.19.0    #
-    #         | system: 1.14         #
+    # version | latest: 1.18.0      #
+    #         | mainline: 1.19.0     #
+    #         | system: 1.17.10      #
     #---------+----------------------#
     nginx:
         name: nginx
         version: latest
-    #------------------------------------#
-    # Nodejs                             #
-    #-----------------+------------------#
-    # version         | latest: 12.16.2  #
-    #                 | mainline: 14.0.0 #
-    #                 | system: 8.10.0   #
-    #-----------------+------------------#
+    #-------------------------------------#
+    # Nodejs                              #
+    #-----------------+-------------------#
+    # version         | latest: 10.19.0   #
+    #                 | mainline: 10.19.0 #
+    #                 | system: 10.19.0   #
+    #-----------------+-------------------#
     nodejs:
         name: nodejs
         version: latest
     #--------------------------------#
     # PHP-FPM                        #
     #---------+----------------------#
-    # version | 5.6, 7.0-7.4, 8.0    #
+    # version | 5.6, 7.0-7.4         #
     # modules | see list             #
     #---------+----------------------#
     php:
@@ -157,8 +156,8 @@ config:
     #--------------------------------#
     # Redis                          #
     #---------+----------------------#
-    # version | latest: 5.0.8        #
-    #         | system: 4.0.9        #
+    # version | latest: 5.0.7        #
+    #         | system: 5.0.7        #
     #---------+----------------------#
     redis:
         name: redis

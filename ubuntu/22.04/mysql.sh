@@ -42,7 +42,7 @@
 
 # Display package information, no need to change.
 os_name="Ubuntu"
-os_version="20.04"
+os_version="22.04"
 package_name="MySQL"
 
 # Default, you can overwrite this setting by assigning -v or --version option.
@@ -284,7 +284,7 @@ export DEBIAN_FRONTEND="noninteractive"
 
 # Add repository for MySQL
 if [ "${package_version}" == "latest" ]; then
-    sudo debconf-set-selections <<< "mysql-apt-config mysql-apt-config/repo-codename select focal"
+    sudo debconf-set-selections <<< "mysql-apt-config mysql-apt-config/repo-codename select jammy"
     sudo debconf-set-selections <<< "mysql-apt-config mysql-apt-config/repo-distro select ubuntu"
     sudo debconf-set-selections <<< "mysql-apt-config mysql-apt-config/repo-url string http://repo.mysql.com/apt"
     sudo debconf-set-selections <<< "mysql-apt-config mysql-apt-config/select-preview select Disabled"

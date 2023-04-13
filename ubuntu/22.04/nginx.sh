@@ -36,7 +36,7 @@
 
 # Display package information, no need to change.
 os_name="Ubuntu"
-os_version="20.04"
+os_version="22.04"
 package_name="Nginx"
 
 # Debian/Ubuntu Only. Package manager: apt-get | aptitude

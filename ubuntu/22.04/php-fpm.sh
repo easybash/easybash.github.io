@@ -21,8 +21,8 @@
 #-
 #- EXAMPLES
 #-
-#-    $ ./php-fpm.sh -v 7.2
-#-    $ ./php-fpm.sh --version=7.2
+#-    $ ./php-fpm.sh -v 8.2
+#-    $ ./php-fpm.sh --version=8.2
 #-    $ ./php-fpm.sh
 #+
 #+ IMPLEMENTATION:
@@ -40,13 +40,13 @@
 
 # Display package information, no need to change.
 os_name="Ubuntu"
-os_version="18.04"
+os_version="22.04"
 package_name="PHP-FPM"
 
 # Debian/Ubuntu Only. Package manager: apt-get | aptitude
 _PM="apt-get"
 
-# Only allow 5.6, 7.0, 7,1, 7.2, 7.3, 7.4
+# Only allow 5.6, 7.0, 7,1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2
 package_version="8.2"
 
 php_modules=(
@@ -269,6 +269,8 @@ sudo ${_PM} install -y php-pear
 
 # Install PHP modules
 if [ "${install_modules}" == "ALL" ]; then
+    echo "========================"
+    echo ${php_modules}
     for module in ${php_modules[@]}; do
         func::easybash_msg info "Proceeding to install PHP module \"${module}\" ..."
         sudo ${_PM} install -y php${package_version}-${module}

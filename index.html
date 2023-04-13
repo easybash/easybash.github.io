@@ -1,26 +1,20 @@
 <html>
 <head>
-  <title>EasyBash.sh CDN Service</title>
+  <title>EasyBash.sh</title>
 <body>
   <h1>EasyBash</h1>
-  <p>Install the lastest version packages easily.</p>
+<code>
 <pre>
-
-wget https://easybash.github.io/ubuntu/16.04/nginx.sh
-wget https://easybash.github.io/ubuntu/16.04/php-fpm.sh
-wget https://easybash.github.io/ubuntu/16.04//mariadb.sh
-  
-sudo chmod 755 ./nginx.sh
-sudo chmod 755 ./php-fpm.sh
-sudo chmod 755 ./mariadb.sh
-  
-./nginx.sh
-./php-fpm.sh
-./mariadb.sh --version=10.2 --password=yourpassword --secure=y --remote=y --remote-user=test_user --remote-password=12345678
-
+wget https://easybash.github.io/easybash.tar.gz
+tar -zxvf easybash.tar.gz
+cd easybash-latest
+./easybash.sh
 </pre>
-  
+</code>
 <a href="https://github.com/terrylinooo/easybash">Star us on GitHub</a>
+<p>
+  Created by <a href="https://terryl.in">Terry Lin</a>
+</p>
 </body>
 </head>
 </html>
